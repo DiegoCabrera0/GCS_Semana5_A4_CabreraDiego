@@ -1,0 +1,20 @@
+{
+    "name": "ueapd/gestion-academica-backend",
+    "description": "API REST Backend para la Gestión Académica de la Unidad Educativa Dr. Alfredo Pareja Diezcanseco",
+    "type": "project",
+    "license": "MIT",
+    "require": {
+        "php": ">=8.0",
+        "firebase/php-jwt": "^6.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    }
+}

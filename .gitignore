@@ -1,5 +1,29 @@
 # Configuración local y secretos
 config/.env
+*.env
+.env
+
+# Android / Gradle
+.gradle/
+build/
+*/build/
+local.properties
+
+# Android Studio
+.idea/
+*.iml
+.kotlin/
+
+# Compilación
+.externalNativeBuild/
+.cxx/
+
+# APKs
+*.apk
+*.aab
+
+# Logs
+*.log
 
 # Archivos temporales de Python
 __pycache__/

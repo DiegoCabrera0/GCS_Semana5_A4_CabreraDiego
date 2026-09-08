@@ -1,0 +1,16 @@
+# Reglas de Enrutamiento Apache para Web Service REST
+DirectoryIndex index.php
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /gestion_academica/
+
+    # Preservar cabecera HTTP Authorization para Bearer Token JWT
+    RewriteCond %{HTTP:Authorization} ^(.*)
+    RewriteRule .* - [e=HTTP_AUTHORIZATION:%1]
+
+    # Redirigir todas las peticiones a index.php excepto archivos y carpetas existentes
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ index.php [QSA,L]
+</IfModule>
